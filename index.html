@@ -5,159 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
     <title>Document</title>
 </head>
+
 <body>
-    <!-- NAVBAR -->
-     <nav class="flex justify-between py-6 px-7 md:px-20 text-xl text-white fixed z-50 bg-red-500 w-full">
-        <div class="text-4xl font-semibold">
-            Presh.
-        </div>
-        <!-- NAVIGATION SECTION -->
-         <div class="flex gap-x-8">
-            <div class="gap-x-8 hidden md:flex">
 
-                <p class="hover:underline cursor-pointer">Home</p>
-                <p class="hover:underline cursor-pointer">New</p>
-                <p class="hover:underline cursor-pointer">Popular</p>
-                <p class="hover:underline cursor-pointer">Trending</p>
-                <p class="hover:underline cursor-pointer">Categories</p>
+<!-- NAVBAR -->
+<nav class="flex justify-between py-6 px-7 md:px-20 text-xl text-white fixed z-50 bg-red-500 w-full">
+    
+    <div class="text-4xl font-semibold">
+        Presh.
+    </div>
+
+    <!-- NAVIGATION SECTION -->
+    <div class="flex gap-x-8">
+
+        <!-- ✅ UPDATED MENU (clean mobile dropdown) -->
+        <div id="mobileMenu"
+        class="gap-x-8 hidden md:flex flex-col md:flex-row gap-y-4 md:gap-y-0 absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent text-black md:text-white px-7 md:px-0 py-6 md:py-0 shadow-lg md:shadow-none rounded-b-2xl md:rounded-none">
+
+            <p class="py-2 hover:underline cursor-pointer">Home</p>
+            <p class="py-2 hover:underline cursor-pointer">New</p>
+            <p class="py-2 hover:underline cursor-pointer">Popular</p>
+            <p class="py-2 hover:underline cursor-pointer">Trending</p>
+            <p class="py-2 hover:underline cursor-pointer">Categories</p>
+        </div>
+
+        <!-- ✅ TOGGLE BUTTON (added, not replacing anything) -->
+        <div class="md:hidden flex items-center">
+            <i class="fa-solid fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO SECTION -->
+<section class="bg-red-200 pb-0 grid md:grid-cols-3 pt-22">
+
+    <div class="md:col-span-2">
+        <img src="hero.jpg" class="h-96 w-full object-cover flex">
+
+        <div class="grid md:grid-cols-2 py-10 gap-y-4 md:gap-y-0">
+            <div>
+                <p class="text-4xl font-semibold px-5">The future of web 3.0?</p>
             </div>
-             <!-- <div class="flex items-center">
 
-                <div class="md:hidden">
-                <i class=" fa-solids fa-bars !text-20"></i>
+            <div>
+                <p class="text-lg px-5 md:px-0">
+                    We dive into the next evolution of the web that claims to put the power of the platform back into the hands of the people. But is it really fulfilling its promise?
+                </p>
+
+                <div class="w-full flex justify-center md:justify-start">
+                    <button class="px-10 py-4 bg-blue-600 mt-6 cursor-pointer">READ NOW</button>
                 </div>
-            </div>  -->
-     </nav>
-
-     <!-- HERO SECTION -->
-      <section class="bg-red-200 pb-0 grid md:grid-cols-3 pt-22">
-        <!-- LEFT SECTION WITH IMAGE -->
-         <div class="md:col-span-2">
-            <!-- BANNER -->
-             <img src="hero.jpg" class="h-96 w-full object-cover flex">
-             <!-- SECTION UNDER IMAGE -->
-              <div class="grid md:grid-cols-2 py-10 gap-y-4 md:gap-y-0">
-                <div>
-                    <p class="text-4xl font-semibold px-5">The future of web 3.0?</p>
-                </div>
-
-                <div>
-                    <p class="text-lg px-5 md:px-0">
-                      We dive into the next evolution of the web that claims to put the power of the platform back into the hands of the people. But is it really fulfilling its promise?
-                    </p>
-                    <div class="w-full flex justify-between md:justify-start">
-                        
-                        <button class="px-10 py-4 bg-blue-600 mt-6 cursor-pointer">READ NOW</button>
-                    </div>
-                </div>
-              </div>
-         </div>
-
-         <!-- RIGHT SECTION WITH TEXT -->
-          <div class="bg-slate-900 text-white">
-            <div class="px-6 flex flex-col justify-evenly h-full">
-                <p class="text-yellow-500 text-2xl mt-8 md:mt-0 hidden md:hidden font-bold">NEW!</p>
-                <div class="border-b border-white py-9">
-                    <p class="font-bold text-2xl md:text-4xl">
-                        Hydrogen Vs Electric Cars
-                    </p>
-
-                    <p>
-                        Will hydrogen-fueled cars ever catch up to EVs?
-                    </p>
-                </div>
-
-                <div class="border-b border-white py-9">
-                    <p class="font-bold text-2xl md:text-4xl">
-                        The Downsides Of AI Artistery
-                    </p>
-                        The Downsides Of AI Artistery
-                    <p>
-                        
-                    </p>
-                </div>
-
-                <div class="border-b border-white py-9">
-                    <p class="font-bold text-2xl md:text-4xl">
-                        Is VC Funding Drying Up?
-                    </p>
-
-                    <p>
-                        Will hydrogen-fueled cars ever catch up to EVs?
-                    </p>
-                </div>
-
-
             </div>
-          </div>
+        </div>
+    </div>
 
+    <!-- RIGHT -->
+    <div class="bg-slate-900 text-white">
+        <div class="px-6 flex flex-col justify-evenly h-full">
 
+            <p class="text-yellow-500 text-2xl mt-8 md:mt-0 hidden md:hidden font-bold">NEW!</p>
 
+            <div class="border-b border-white py-9">
+                <p class="font-bold text-2xl md:text-4xl">Hydrogen Vs Electric Cars</p>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
 
+            <div class="border-b border-white py-9">
+                <p class="font-bold text-2xl md:text-4xl">The Downsides Of AI Artistery</p>
+                The Downsides Of AI Artistery
+            </div>
 
-      </section>
-
-      <!-- PART ABOVE THE FOOTER -->
-
-      <div class="grid sm:grid-cols-3 py-10">
-        <!-- FIRST BOX -->
-         <div class="h-full w-full flex items-center px-3 md:px-10 gap-x-3 cursor-pointer">
-            <img src="w1.jpeg" alt="" class="h-[250px] w-[170px] object-cover">
-            <!-- LABELS -->
-             <div class=" h-full flex-col justify-evenly py-5">
-                <p class="text-2xl font-mono font-bold">01</p>
-                <p class="text-2xl  font-semibold">Reviving Retro PCs</p>
-                <p class="text-slate-600 text-lg">What happens when old PCs are given modern upgrades?</p>
-             </div>
-         </div>
-
-        <!-- SECOND BOX -->
-         <div class="h-full w-full flex items-center px-3 md:px-10 gap-x-3 cursor-pointer">
-            <img src="w2.jpeg" alt="" class="h-[250px] w-[170px] object-cover">
-            <!-- LABELS -->
-             <div class=" h-full flex-col justify-evenly py-5">
-                <p class="text-2xl font-mono font-bold">02</p>
-                <p class="text-2xl  font-semibold">Top 10 Laptops of 2022</p>
-                <p class="text-slate-500 text-lg">Our best picks for various needs and budgets</p>
-             </div>
-         </div>
-
-        <!-- THIRD BOX-->
-         <div class="h-full w-full flex items-center px-3 md:px-10 gap-x-3 cursor-pointer">
-            <img src="w3.jpeg" alt="controller image" class="h-[250px] w-[170px] object-cover">
-            <!-- LABELS -->
-             <div class=" h-full flex-col justify-evenly py-5">
-                <p class="text-2xl font-mono font-bold">03</p>
-                <p class="text-xl  font-semibold">The Growth Of Gaming</p>
-                <p class="text-slate-600 text-lg">How the pandemic sparked fresh opportunities.</p>
-             </div>
-
-         </div>
-      </div>
-
-      <!-- FOOTER -->
-       <div class="bg-slate-900 py-14 grid md:grid-cols-2">
-        <div class="gap-x-20 flex flex-cols items-center justify-center text-white text-xl md:flex justify-start items-start gap-y-3 pl-3">
-
-            <a href="" class="hover:text-orange-500 flex">Products</a>
-            <a href="" class="hover:text-orange-500 flex">Blog</a>
-            <a href="" class="hover:text-orange-500 flex">Shop</a>
-            <a href="" class="hover:text-orange-500 flex">Contact</a>
+            <div class="border-b border-white py-9">
+                <p class="font-bold text-2xl md:text-4xl">Is VC Funding Drying Up?</p>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            </div>
 
         </div>
+    </div>
 
-        <div class="flex items-center justify-between text-white px-10 py-10 text-xl">
-            <img src="w4.jpg" alt="" class="rounded-full w-24">
-            <p>© 2023 batmobile inc</p>
+</section>
+
+
+<!-- PART ABOVE THE FOOTER -->
+<div class="grid gap-6 px-4 py-10 sm:grid-cols-2 md:grid-cols-3">
+
+    <div class="h-full w-full flex flex-col sm:flex-row items-start sm:items-center px-3 md:px-10 gap-4 cursor-pointer">
+        <img src="w1.jpeg" class="w-full sm:w-[170px] h-48 sm:h-[250px] object-cover">
+        <div class="h-full flex-col justify-evenly py-5">
+            <p class="text-2xl font-mono font-bold">01</p>
+            <p class="text-2xl font-semibold">Reviving Retro PCs</p>
+            <p class="text-slate-600 text-lg">What happens when old PCs are given modern upgrades?</p>
         </div>
-       </div>
+    </div>
+
+    <div class="h-full w-full flex items-center px-3 md:px-10 gap-x-3 cursor-pointer">
+        <img src="w3.jpeg" class="w-full sm:w-[170px] h-48 sm:h-[250px] object-cover">
+        <div class="h-full flex-col justify-evenly py-5">
+            <p class="text-2xl font-mono font-bold">02</p>
+            <p class="text-2xl font-semibold">Top 10 Laptops of 2022</p>
+            <p class="text-slate-500 text-lg">Our best picks for various needs and budgets</p>
+        </div>
+    </div>
+
+    <div class="h-full w-full flex items-center px-3 md:px-10 gap-x-3 cursor-pointer">
+        <img src="w3.jpeg" class="w-full sm:w-[170px] h-48 sm:h-[250px] object-cover">
+        <div class="h-full flex-col justify-evenly py-5">
+            <p class="text-2xl font-mono font-bold">03</p>
+            <p class="text-xl font-semibold">The Growth Of Gaming</p>
+            <p class="text-slate-600 text-lg">How the pandemic sparked fresh opportunities.</p>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- FOOTER -->
+<div class="bg-slate-900 py-14 grid md:grid-cols-2">
+
+    <div class="gap-x-20 flex flex-cols items-center justify-center text-white text-xl md:flex justify-start items-start gap-y-3 pl-3">
+        <a href="" class="hover:text-orange-500 flex">Products</a>
+        <a href="" class="hover:text-orange-500 flex">Blog</a>
+        <a href="" class="hover:text-orange-500 flex">Shop</a>
+        <a href="" class="hover:text-orange-500 flex">Contact</a>
+    </div>
+
+    <div class="flex items-center justify-between text-white px-10 py-10 text-xl">
+        <img src="w4.jpg" class="rounded-full w-24">
+        <p>© 2023 batmobile inc</p>
+    </div>
+
+</div>
+
+
+<!-- ✅ SCRIPT -->
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+</script>
 
 </body>
 </html>
