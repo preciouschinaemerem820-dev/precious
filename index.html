@@ -3,21 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" rel="stylesheet">
 
     <title>Document</title>
 
     <style>
-        /* 🔥 REAL FIX for hidden mobile overflow */
         html, body {
-            overflow-x: hidden;
+            overflow-x: hidden; /* 🔥 REAL FIX */
         }
     </style>
 </head>
@@ -25,23 +23,24 @@
 <body>
 
 <!-- NAVBAR -->
-<nav class="flex justify-between items-center py-6 px-5 md:px-20 text-xl text-white fixed z-50 bg-red-500 w-full">
+<nav class="flex justify-between py-6 px-7 md:px-20 text-xl text-white fixed z-50 bg-red-500 w-full">
 
-    <div class="text-3xl md:text-4xl font-semibold">
+    <div class="text-4xl font-semibold">
         Presh.
     </div>
 
-    <div class="flex items-center gap-6">
+    <div class="flex gap-x-8 items-center">
 
-        <!-- MENU -->
+        <!-- MOBILE MENU -->
         <div id="mobileMenu"
-        class="hidden md:flex flex-col md:flex-row absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent text-black md:text-white px-5 md:px-0 py-6 md:py-0 shadow-lg md:shadow-none">
+        class="hidden md:flex flex-col md:flex-row gap-x-8 gap-y-4 md:gap-y-0 absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent text-black md:text-white px-7 md:px-0 py-6 md:py-0 shadow-lg md:shadow-none rounded-b-2xl md:rounded-none">
 
-            <p class="py-2 hover:underline cursor-pointer">Home</p>
-            <p class="py-2 hover:underline cursor-pointer">New</p>
-            <p class="py-2 hover:underline cursor-pointer">Popular</p>
-            <p class="py-2 hover:underline cursor-pointer">Trending</p>
-            <p class="py-2 hover:underline cursor-pointer">Categories</p>
+            <p class="py-2 md:py-0 hover:underline cursor-pointer">Home</p>
+            <p class="py-2 md:py-0 hover:underline cursor-pointer">New</p>
+            <p class="py-2 md:py-0 hover:underline cursor-pointer">Popular</p>
+            <p class="py-2 md:py-0 hover:underline cursor-pointer">Trending</p>
+            <p class="py-2 md:py-0 hover:underline cursor-pointer">Categories</p>
+
         </div>
 
         <!-- TOGGLE -->
@@ -55,53 +54,58 @@
 
 
 <!-- HERO -->
-<section class="bg-red-200 grid md:grid-cols-3 pt-24 w-full">
+<section class="bg-red-200 pb-0 grid md:grid-cols-3 pt-24 w-full">
 
     <div class="md:col-span-2 w-full">
 
-        <img src="hero.jpg" class="w-full max-w-full h-96 object-cover">
+        <img src="hero.jpg" class="h-96 w-full max-w-full object-cover">
 
-        <div class="grid md:grid-cols-2 gap-5 py-10 px-5">
+        <div class="grid md:grid-cols-2 py-10 gap-y-6 px-5">
 
-            <p class="text-3xl md:text-4xl font-semibold">
-                The future of web 3.0?
-            </p>
+            <div>
+                <p class="text-3xl md:text-4xl font-semibold">
+                    The future of web 3.0?
+                </p>
+            </div>
 
             <div>
                 <p class="text-base md:text-lg">
-                    We dive into the next evolution of the web that claims to put the power of the platform back into the hands of the people.
+                    We dive into the next evolution of the web that claims to put the power back into the hands of the people.
                 </p>
 
-                <div class="w-full flex justify-center md:justify-center">
-                        
-                        <button class="px-10 py-4 bg-blue-600 mt-6 cursor-pointer">READ NOW</button>
-                    </div>
+                <div class="w-full flex justify-center md:justify-start">
+                    <button class="px-10 py-4 bg-blue-600 mt-6 text-white">
+                        READ NOW
+                    </button>
+                </div>
             </div>
 
         </div>
+
     </div>
 
-    <!-- RIGHT SECTION -->
+    <!-- RIGHT -->
     <div class="bg-slate-900 text-white w-full">
 
-        <div class="px-5 md:px-6">
+        <div class="px-6">
 
             <div class="border-b border-white py-8">
-                <p class="font-bold text-xl md:text-3xl">Hydrogen Vs Electric Cars</p>
-                <p class="text-sm md:text-base">Will hydrogen-fueled cars ever catch up to EVs?</p>
+                <p class="font-bold text-2xl md:text-4xl">Hydrogen Vs Electric Cars</p>
+                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
             </div>
 
             <div class="border-b border-white py-8">
-                <p class="font-bold text-xl md:text-3xl">The Downsides Of AI Artistery</p>
-                <p class="text-sm md:text-base">AI art is growing fast but has challenges.</p>
+                <p class="font-bold text-2xl md:text-4xl">The Downsides Of AI Artistery</p>
+                <p>AI art is growing fast but has issues.</p>
             </div>
 
             <div class="border-b border-white py-8">
-                <p class="font-bold text-xl md:text-3xl">Is VC Funding Drying Up?</p>
-                <p class="text-sm md:text-base">Investments are slowing in tech startups.</p>
+                <p class="font-bold text-2xl md:text-4xl">Is VC Funding Drying Up?</p>
+                <p>Investments in tech startups are slowing.</p>
             </div>
 
         </div>
+
     </div>
 
 </section>
@@ -111,7 +115,7 @@
 <div class="grid gap-6 px-4 py-10 md:grid-cols-3 w-full">
 
     <div class="flex flex-col sm:flex-row gap-4 w-full">
-        <img src="w1.jpeg" class="w-full sm:w-[150px] h-40 object-cover">
+        <img src="w1.jpeg" class="w-full sm:w-[150px] h-40 object-cover max-w-full">
         <div>
             <p class="text-xl font-bold">01</p>
             <p class="text-lg font-semibold">Reviving Retro PCs</p>
@@ -120,7 +124,7 @@
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4 w-full">
-        <img src="w2.jpeg" class="w-full sm:w-[150px] h-40 object-cover">
+        <img src="w2.jpeg" class="w-full sm:w-[150px] h-40 object-cover max-w-full">
         <div>
             <p class="text-xl font-bold">02</p>
             <p class="text-lg font-semibold">Top Laptops</p>
@@ -129,7 +133,7 @@
     </div>
 
     <div class="flex flex-col sm:flex-row gap-4 w-full">
-        <img src="w3.jpeg" class="w-full sm:w-[150px] h-40 object-cover">
+        <img src="w3.jpeg" class="w-full sm:w-[150px] h-40 object-cover max-w-full">
         <div>
             <p class="text-xl font-bold">03</p>
             <p class="text-lg font-semibold">Gaming Growth</p>
@@ -141,7 +145,7 @@
 
 
 <!-- FOOTER -->
-<div class="bg-slate-900 text-white grid md:grid-cols-2 px-5 py-10">
+<div class="bg-slate-900 text-white grid md:grid-cols-2 px-5 py-10 w-full">
 
     <div class="flex flex-wrap gap-5">
         <a href="#">Products</a>
