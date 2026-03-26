@@ -8,29 +8,34 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <title>Document</title>
+
+    <style>
+        /* 🔥 REAL FIX for hidden mobile overflow */
+        html, body {
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="flex justify-between py-6 px-7 md:px-20 text-xl text-white fixed z-50 bg-red-500 w-full">
-    
-    <div class="text-4xl font-semibold">
+<nav class="flex justify-between items-center py-6 px-5 md:px-20 text-xl text-white fixed z-50 bg-red-500 w-full">
+
+    <div class="text-3xl md:text-4xl font-semibold">
         Presh.
     </div>
 
-    <!-- NAVIGATION SECTION -->
-    <div class="flex gap-x-8">
+    <div class="flex items-center gap-6">
 
-        <!-- ✅ UPDATED MENU (clean mobile dropdown) -->
+        <!-- MENU -->
         <div id="mobileMenu"
-        class="gap-x-8 hidden md:flex flex-col md:flex-row gap-y-4 md:gap-y-0 absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent text-black md:text-white px-7 md:px-0 py-6 md:py-0 shadow-lg md:shadow-none rounded-b-2xl md:rounded-none">
+        class="hidden md:flex flex-col md:flex-row absolute md:static top-20 left-0 w-full md:w-auto bg-white md:bg-transparent text-black md:text-white px-5 md:px-0 py-6 md:py-0 shadow-lg md:shadow-none">
 
             <p class="py-2 hover:underline cursor-pointer">Home</p>
             <p class="py-2 hover:underline cursor-pointer">New</p>
@@ -39,8 +44,8 @@
             <p class="py-2 hover:underline cursor-pointer">Categories</p>
         </div>
 
-        <!-- ✅ TOGGLE BUTTON (added, not replacing anything) -->
-        <div class="md:hidden flex items-center">
+        <!-- TOGGLE -->
+        <div class="md:hidden">
             <i class="fa-solid fa-bars text-2xl cursor-pointer" onclick="toggleMenu()"></i>
         </div>
 
@@ -49,48 +54,50 @@
 </nav>
 
 
-<!-- HERO SECTION -->
-<section class="bg-red-200 pb-0 grid md:grid-cols-3 pt-22">
+<!-- HERO -->
+<section class="bg-red-200 grid md:grid-cols-3 pt-24 w-full">
 
-    <div class="md:col-span-2">
-        <img src="hero.jpg" class="h-96 w-full object-cover flex">
+    <div class="md:col-span-2 w-full">
 
-        <div class="grid md:grid-cols-2 py-10 gap-y-4 md:gap-y-0">
+        <img src="hero.jpg" class="w-full max-w-full h-96 object-cover">
+
+        <div class="grid md:grid-cols-2 gap-5 py-10 px-5">
+
+            <p class="text-3xl md:text-4xl font-semibold">
+                The future of web 3.0?
+            </p>
+
             <div>
-                <p class="text-4xl font-semibold px-5">The future of web 3.0?</p>
-            </div>
-
-            <div>
-                <p class="text-lg px-5 md:px-0">
-                    We dive into the next evolution of the web that claims to put the power of the platform back into the hands of the people. But is it really fulfilling its promise?
+                <p class="text-base md:text-lg">
+                    We dive into the next evolution of the web that claims to put the power of the platform back into the hands of the people.
                 </p>
 
-                <div class="w-full flex justify-center md:justify-start">
-                    <button class="px-10 py-4 bg-blue-600 mt-6 cursor-pointer">READ NOW</button>
-                </div>
+                <button class="mt-5 px-8 py-3 bg-blue-600 text-white">
+                    READ NOW
+                </button>
             </div>
+
         </div>
     </div>
 
-    <!-- RIGHT -->
-    <div class="bg-slate-900 text-white">
-        <div class="px-6 flex flex-col justify-evenly h-full">
+    <!-- RIGHT SECTION -->
+    <div class="bg-slate-900 text-white w-full">
 
-            <p class="text-yellow-500 text-2xl mt-8 md:mt-0 hidden md:hidden font-bold">NEW!</p>
+        <div class="px-5 md:px-6">
 
-            <div class="border-b border-white py-9">
-                <p class="font-bold text-2xl md:text-4xl">Hydrogen Vs Electric Cars</p>
-                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            <div class="border-b border-white py-8">
+                <p class="font-bold text-xl md:text-3xl">Hydrogen Vs Electric Cars</p>
+                <p class="text-sm md:text-base">Will hydrogen-fueled cars ever catch up to EVs?</p>
             </div>
 
-            <div class="border-b border-white py-9">
-                <p class="font-bold text-2xl md:text-4xl">The Downsides Of AI Artistery</p>
-                The Downsides Of AI Artistery
+            <div class="border-b border-white py-8">
+                <p class="font-bold text-xl md:text-3xl">The Downsides Of AI Artistery</p>
+                <p class="text-sm md:text-base">AI art is growing fast but has challenges.</p>
             </div>
 
-            <div class="border-b border-white py-9">
-                <p class="font-bold text-2xl md:text-4xl">Is VC Funding Drying Up?</p>
-                <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+            <div class="border-b border-white py-8">
+                <p class="font-bold text-xl md:text-3xl">Is VC Funding Drying Up?</p>
+                <p class="text-sm md:text-base">Investments are slowing in tech startups.</p>
             </div>
 
         </div>
@@ -99,33 +106,33 @@
 </section>
 
 
-<!-- PART ABOVE THE FOOTER -->
-<div class="grid gap-6 px-4 py-10 sm:grid-cols-2 md:grid-cols-3">
+<!-- CARDS -->
+<div class="grid gap-6 px-4 py-10 md:grid-cols-3 w-full">
 
-    <div class="h-full w-full flex flex-col sm:flex-row items-start sm:items-center px-3 md:px-10 gap-4 cursor-pointer">
-        <img src="w1.jpeg" class="w-full sm:w-[170px] h-48 sm:h-[250px] object-cover">
-        <div class="h-full flex-col justify-evenly py-5">
-            <p class="text-2xl font-mono font-bold">01</p>
-            <p class="text-2xl font-semibold">Reviving Retro PCs</p>
-            <p class="text-slate-600 text-lg">What happens when old PCs are given modern upgrades?</p>
+    <div class="flex flex-col sm:flex-row gap-4 w-full">
+        <img src="w1.jpeg" class="w-full sm:w-[150px] h-40 object-cover">
+        <div>
+            <p class="text-xl font-bold">01</p>
+            <p class="text-lg font-semibold">Reviving Retro PCs</p>
+            <p class="text-sm text-gray-600">Old PCs upgraded with modern tech.</p>
         </div>
     </div>
 
-    <div class="h-full w-full flex items-center px-3 md:px-10 gap-x-3 cursor-pointer">
-        <img src="w3.jpeg" class="w-full sm:w-[170px] h-48 sm:h-[250px] object-cover">
-        <div class="h-full flex-col justify-evenly py-5">
-            <p class="text-2xl font-mono font-bold">02</p>
-            <p class="text-2xl font-semibold">Top 10 Laptops of 2022</p>
-            <p class="text-slate-500 text-lg">Our best picks for various needs and budgets</p>
+    <div class="flex flex-col sm:flex-row gap-4 w-full">
+        <img src="w2.jpeg" class="w-full sm:w-[150px] h-40 object-cover">
+        <div>
+            <p class="text-xl font-bold">02</p>
+            <p class="text-lg font-semibold">Top Laptops</p>
+            <p class="text-sm text-gray-600">Best laptops for every budget.</p>
         </div>
     </div>
 
-    <div class="h-full w-full flex items-center px-3 md:px-10 gap-x-3 cursor-pointer">
-        <img src="w3.jpeg" class="w-full sm:w-[170px] h-48 sm:h-[250px] object-cover">
-        <div class="h-full flex-col justify-evenly py-5">
-            <p class="text-2xl font-mono font-bold">03</p>
-            <p class="text-xl font-semibold">The Growth Of Gaming</p>
-            <p class="text-slate-600 text-lg">How the pandemic sparked fresh opportunities.</p>
+    <div class="flex flex-col sm:flex-row gap-4 w-full">
+        <img src="w3.jpeg" class="w-full sm:w-[150px] h-40 object-cover">
+        <div>
+            <p class="text-xl font-bold">03</p>
+            <p class="text-lg font-semibold">Gaming Growth</p>
+            <p class="text-sm text-gray-600">Gaming industry is expanding fast.</p>
         </div>
     </div>
 
@@ -133,24 +140,23 @@
 
 
 <!-- FOOTER -->
-<div class="bg-slate-900 py-14 grid md:grid-cols-2">
+<div class="bg-slate-900 text-white grid md:grid-cols-2 px-5 py-10">
 
-    <div class="gap-x-20 flex flex-cols items-center justify-center text-white text-xl md:flex justify-start items-start gap-y-3 pl-3">
-        <a href="" class="hover:text-orange-500 flex">Products</a>
-        <a href="" class="hover:text-orange-500 flex">Blog</a>
-        <a href="" class="hover:text-orange-500 flex">Shop</a>
-        <a href="" class="hover:text-orange-500 flex">Contact</a>
+    <div class="flex flex-wrap gap-5">
+        <a href="#">Products</a>
+        <a href="#">Blog</a>
+        <a href="#">Shop</a>
+        <a href="#">Contact</a>
     </div>
 
-    <div class="flex items-center justify-between text-white px-10 py-10 text-xl">
-        <img src="w4.jpg" class="rounded-full w-24">
+    <div class="flex items-center justify-between mt-5 md:mt-0">
+        <img src="w4.jpg" class="w-20 rounded-full">
         <p>© 2023 batmobile inc</p>
     </div>
 
 </div>
 
 
-<!-- ✅ SCRIPT -->
 <script>
 function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("hidden");
